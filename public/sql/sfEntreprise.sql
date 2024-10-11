@@ -42,9 +42,14 @@ CREATE TABLE IF NOT EXISTS `employe` (
   PRIMARY KEY (`id`),
   KEY `IDX_F804D3B9A4AEAFEA` (`entreprise_id`),
   CONSTRAINT `FK_F804D3B9A4AEAFEA` FOREIGN KEY (`entreprise_id`) REFERENCES `entreprise` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Listage des données de la table sfentreprisedemo_hajar.employe : ~0 rows (environ)
+INSERT INTO `employe` (`id`, `entreprise_id`, `nom`, `prenom`, `date_naissance`, `date_embauche`) VALUES
+	(1, 1, 'Smail', 'Stéphane', '1982-10-11 16:32:58', '2019-10-11 16:33:02'),
+	(2, 1, 'Mathieu', 'Quentin', '1997-10-11 16:33:30', '2022-10-11 16:33:34'),
+	(3, 1, 'Murmann', 'Mickael', '1985-10-11 16:33:58', '2010-05-11 16:34:11'),
+	(4, 2, 'Andres', 'Mathilde', '1994-10-11 16:34:47', '2015-03-11 16:35:00');
 
 -- Listage de la structure de table sfentreprisedemo_hajar. entreprise
 CREATE TABLE IF NOT EXISTS `entreprise` (
