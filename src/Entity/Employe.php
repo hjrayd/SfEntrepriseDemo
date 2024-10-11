@@ -97,6 +97,8 @@ class Employe
 
     public function __toString()
     {
-        return $this->prenom." ".$this->nom;
+        return $this->prenom." ".$this->nom." ".$this->getEntreprise()->getRaisonSociale();
     }
+
+
 }
