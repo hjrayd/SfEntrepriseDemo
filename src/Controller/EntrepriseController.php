@@ -15,7 +15,7 @@ class EntrepriseController extends AbstractController
     public function index(EntrepriseRepository $entrepriseRepository): Response
     {
         //SELECT * FROM entreprise ORDER BY raisonSociale
-        $entreprises = $entrepriseRepository->findBy(["ville" => "Strasbourg"], ["raisonSociale" => "ASC"]);
+        $entreprises = $entrepriseRepository->findBy([], ["raisonSociale" => "ASC"]);
         return $this->render('entreprise/index.html.twig', [
             'entreprises' => $entreprises
         
